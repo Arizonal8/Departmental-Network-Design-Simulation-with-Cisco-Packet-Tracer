@@ -1,0 +1,45 @@
+
+Cable Connections Overview
+==========================
+
+Devices Used:
+- 3 Switches (one per department: Accounts, Sales, Delivery)
+- 6 PCs (2 per department)
+- 1 Router
+
+Cable Types Used:
+-----------------
+| Cable Type               | Purpose                                  |
+|--------------------------|------------------------------------------|
+| Copper Straight-Through  | Connect PCs to switches, and switches to router |
+| Console Cable (optional) | Configure router via terminal (not used here)   |
+
+1. Accounts Department
+-----------------------
+| From Device     | Port           | To Device | Port               | Cable Type              |
+|-----------------|----------------|-----------|--------------------|--------------------------|
+| PC1 (Accounts)  | FastEthernet0  | Switch 1  | FastEthernet0/1    | Copper Straight-Through |
+| PC2 (Accounts)  | FastEthernet0  | Switch 1  | FastEthernet0/2    | Copper Straight-Through |
+| Switch 1        | FastEthernet0/24 | Router   | GigabitEthernet0/0 | Copper Straight-Through |
+
+2. Sales Department
+--------------------
+| From Device     | Port           | To Device | Port               | Cable Type              |
+|-----------------|----------------|-----------|--------------------|--------------------------|
+| PC1 (Sales)     | FastEthernet0  | Switch 2  | FastEthernet0/1    | Copper Straight-Through |
+| PC2 (Sales)     | FastEthernet0  | Switch 2  | FastEthernet0/2    | Copper Straight-Through |
+| Switch 2        | FastEthernet0/24 | Router   | GigabitEthernet0/1 | Copper Straight-Through |
+
+3. Delivery Department
+-----------------------
+| From Device     | Port           | To Device | Port               | Cable Type              |
+|-----------------|----------------|-----------|--------------------|--------------------------|
+| PC1 (Delivery)  | FastEthernet0  | Switch 3  | FastEthernet0/1    | Copper Straight-Through |
+| PC2 (Delivery)  | FastEthernet0  | Switch 3  | FastEthernet0/2    | Copper Straight-Through |
+| Switch 3        | FastEthernet0/24 | Router   | GigabitEthernet0/2 | Copper Straight-Through |
+
+Summary:
+--------
+- Each department’s PCs connect to a dedicated switch.
+- Each switch connects to a different interface on the router.
+- All connections use Copper Straight-Through cables.

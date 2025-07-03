@@ -1,0 +1,127 @@
+
+Router>
+Router>
+Router>enable
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#int range gig0/0-2
+Router(config-if-range)#no shutdown
+Router(config-if-range)#exit
+Router(config)#int gig0/0
+Router(config-if)#ip address 192.165.20.1 255.255.255.192
+Router(config-if)#
+Router(config-if)#int gig0/1
+Router(config-if)#ip address 192.165.20.65 255.255.255.192
+Router(config-if)#int gig0/2
+Router(config-if)#ip address 192.165.20.129 255.255.255.192
+Router(config-if)#int gig0/1
+Router(config-if)#ip address 192.165.20.65 255.255.255.192
+Router(config-if)#do wr
+Building configuration...
+[OK]
+Router(config-if)#exit
+Router(config)#do sh start
+Using 740 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX1524DVEG-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 192.165.20.1 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 192.165.20.65 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ ip address 192.165.20.129 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ --More-- 
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+
+%SYS-5-CONFIG_I: Configured from console by console
+
+%SYS-5-CONFIG_I: Configured from console by console
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+ --More-- end
+
+
+
+% Unknown command or computer name, or unable to find computer address
+
+Router(config)#%IP-4-DUPADDR: Duplicate address 192.165.20.1 on GigabitEthernet0/0, sourced by 00E0.F93D.AEE5
+
+
+
+
+
+
+
+
+
+Router con0 is now available
