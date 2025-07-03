@@ -1,0 +1,49 @@
+
+Creating 3 Subnet
+
+Goal: Divide the network 192.165.20.0 into at least 3 subnets.
+
+Step 1: What is a Subnet?
+-------------------------
+A subnet (short for sub-network) is a smaller part of a larger network.
+Subnetting allows us to divide one large network into smaller, manageable sections.
+
+Step 2: Identify the IP Class
+-----------------------------
+IP Address: 192.165.20.0
+This is a Class C address (starts with 192).
+Default subnet mask for Class C: 255.255.255.0 → /24
+
+Step 3: How Many Bits to Borrow?
+--------------------------------
+We need at least 3 subnets.
+
+Subnets are calculated in powers of 2:
+2^1 = 2 subnets → Not enough
+2^2 = 4 subnets → ✅ Enough!
+
+So, we borrow 2 bits from the host portion.
+
+New subnet mask: /24 + 2 = /26
+Which is: 255.255.255.192
+
+Step 4: What Do We Get with /26?
+--------------------------------
+Total subnets = 2^2 = 4
+Hosts per subnet = 2^6 = 64 (6 bits left for host)
+Usable IPs per subnet = 64 - 2 = 62 (excluding network & broadcast addresses)
+
+Final Answer:
+-------------
+Subnet Mask: 255.255.255.192 or /26
+
+Step 5: The 4 Subnets
+---------------------
+| Subnet # | Network Address   | Usable IP Range                  | Broadcast Address    |
+|----------|--------------------|----------------------------------|----------------------|
+| 1        | 192.165.20.0       | 192.165.20.1 – 192.165.20.62     | 192.165.20.63        |
+| 2        | 192.165.20.64      | 192.165.20.65 – 192.165.20.126   | 192.165.20.127       |
+| 3        | 192.165.20.128     | 192.165.20.129 – 192.165.20.190  | 192.165.20.191       |
+| 4        | 192.165.20.192     | 192.165.20.193 – 192.165.20.254  | 192.165.20.255       |
+
+Each subnet has 62 usable IP addresses.
