@@ -1,7 +1,7 @@
 
 # Departmental Network Design Using Cisco Packet Tracer
 
-## 📁 Project Overview
+# Project Overview
 
 This project demonstrates the design and implementation of a basic **LAN (Local Area Network)** for a small organization using **Cisco Packet Tracer**. The network connects three departments — **Accounts**, **Sales**, and **Delivery** — each with their own subnetwork, appropriate routing, and IP configuration.
 
@@ -9,7 +9,7 @@ The goal was to simulate a realistic business environment where departments are 
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 - **Cisco Packet Tracer** (Network simulation)
 - **IPv4 Subnetting**
 - **Static IP configuration**
@@ -19,11 +19,11 @@ The goal was to simulate a realistic business environment where departments are 
 
 ---
 
-## 🧱 Network Structure
+# Network Structure
 
-### Departments:
+## Departments:
 - **Accounts Department** – 2 PCs
-- **Sales Department** – 2 PCs
+- **Sales Department** – 2 PCs and 1 laptop
 - **Delivery Department** – 2 PCs
 
 ### Network Address Used:
@@ -36,11 +36,11 @@ The goal was to simulate a realistic business environment where departments are 
 ### Devices Used:
 - 3 departmental **Switches**
 - 1 or more **Routers** to handle inter-departmental communication
-- 6 PCs (2 per department)
+- 7 PCs
 
 ---
 
-## 📡 Network Design Summary
+## Network Design Summary
 
 - Each department was assigned a **separate subnet**.
 - Devices were connected using **Copper Straight-Through cables**.
@@ -51,7 +51,7 @@ The goal was to simulate a realistic business environment where departments are 
 
 ---
 
-## ✅ Objectives Achieved
+## Objectives Achieved
 
 - [x] Designed 3 isolated departmental networks
 - [x] Subnetted a Class C network to create 4 subnets
@@ -61,7 +61,7 @@ The goal was to simulate a realistic business environment where departments are 
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 project/
@@ -72,7 +72,7 @@ project/
 
 ---
 
-## 🎓 What I Learned
+##  What I Learned
 
 - How to **subnet a network** using CIDR notation
 - How to connect and configure **routers and switches**
@@ -82,7 +82,7 @@ project/
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - Add **DHCP configuration** to automate IP addressing
 - Introduce **VLANs** to increase network security
@@ -91,22 +91,15 @@ project/
 
 ---
 
-## 📌 Author
+##  How to Open the Project
 
-**Name:** [Your Full Name]  
-**Cybersecurity Student | Networking Enthusiast**
-
----
-
-## 📎 How to Open the Project
-
-1. Download and install **Cisco Packet Tracer** (if you haven't already)
+1. Download and install **Cisco Packet Tracer** 
 2. Open the `departmental-network.pkt` file
 3. Review IP configurations and run connectivity tests
 
 ---
 
-## 💼 Relevance to Cybersecurity
+## Relevance to Cybersecurity
 
 This project represents an essential foundation in **networking**, which is critical in cybersecurity. Understanding how to design, segment, and test networks is key for roles like:
 - SOC Analyst
